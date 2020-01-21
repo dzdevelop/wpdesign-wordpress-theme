@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>WP Cheat Sheet</title>
+
+	<!-- UIkit CSS -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.2.4/dist/css/uikit.min.css" />
+
+	<!-- UIkit JS -->
+	<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.4/dist/js/uikit.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.4/dist/js/uikit-icons.min.js"></script>
+</head>
+<body class="uk-background-muted uk-padding uk-padding-remove-horizontal">
+
+	<!-- This document was created in 2019 by Daniele Zerilli for MOHOLE S.R.L. -->
+
+	<div class="uk-container">
+
+		<h1 class="uk-heading-bullet">WP Cheat Sheet</h1>
+
+		<div class="uk-card uk-card-default uk-card-small uk-card-body uk-margin-medium">
+			<h3>main templates</h3>
+			<div class="uk-overflow-auto uk-margin">
+				<table class="uk-table uk-table-small uk-table-striped uk-table-middle">
+					<tbody>
+						<tr>
+							<td class=""><span class="uk-label uk-label-success">required</span></td>
+							<td>index.php</td>
+							<td class="uk-text-right">The main template file. It is required in all themes.</td>
+						</tr>
+						<tr>
+							<td class=""><span class="uk-label uk-label-success">required</span></td>
+							<td>style.css</td>
+							<td class="uk-text-right">The main stylesheet. It is required in all themes and contains the information header for your theme.</td>
+						</tr>
+						<tr>
+							<td class=""><span class="uk-label">recommended</span></td>
+							<td>404.php</td>
+							<td class="uk-text-right">The 404 template is used when WordPress cannot find a post, page, or other content that matches the visitor’s request.</td>
+						</tr>
+						<tr>
+							<td class=""><span class="uk-label">recommended</span></td>
+							<td>header.php</td>
+							<td class="uk-text-right">The header template file usually contains your site’s document type, meta information, links to stylesheets and scripts, and other data.</td>
+						</tr>
+						<tr>
+							<td class=""><span class="uk-label">recommended</span></td>
+							<td>footer.php</td>
+							<td class="uk-text-right">The footer template file usually contains your site’s scripts, and other data.</td>
+						</tr>
+						<tr>
+							<td class=""><span class="uk-label">recommended</span></td>
+							<td>single.php</td>
+							<td class="uk-text-right">The single post template is used when a visitor requests a single post.</td>
+						</tr>
+						<tr>
+							<td class=""><span class="uk-label">recommended</span></td>
+							<td>page.php</td>
+							<td class="uk-text-right">The page template is used when visitors request individual pages, which are a built-in template.</td>
+						</tr>
+						<tr>
+							<td class=""><span class="uk-label">recommended</span></td>
+							<td>archive.php</td>
+							<td class="uk-text-right">The archive template is used when visitors request posts by category, author, or date. Note: this template will be overridden if more specific templates are present like category.php, author.php, and date.php.</td>
+						</tr>
+						<tr>
+							<td class=""><span class="uk-label">recommended</span></td>
+							<td>search.php</td>
+							<td class="uk-text-right">The search results template is used to display a visitor’s search results.</td>
+						</tr>
+						<tr>
+							<td class=""><span class="uk-label uk-label-warning">useful</span></td>
+							<td>category.php</td>
+							<td class="uk-text-right">The category template is used when visitors request posts by category.</td>
+						</tr>
+						<tr>
+							<td class=""><span class="uk-label uk-label-warning">useful</span></td>
+							<td>tag.php</td>
+							<td class="uk-text-right">The tag template is used when visitors request posts by tag.</td>
+						</tr>
+						<tr>
+							<td class=""><span class="uk-label uk-label-warning">useful</span></td>
+							<td>comments.php</td>
+							<td class="uk-text-right">The comments template.</td>
+						</tr>
+						<tr>
+							<td class=""><span class="uk-label uk-label-warning">useful</span></td>
+							<td>front-page.php</td>
+							<td class="uk-text-right">The front page template is always used as the site front page if it exists, regardless of what settings on Admin > Settings > Reading.</td>
+						</tr>
+						<tr>
+							<td class=""><span class="uk-label uk-label-warning">useful</span></td>
+							<td>home.php</td>
+							<td class="uk-text-right">The home page template is the front page by default. If you do not set WordPress to use a static front page, this template is used to show latest posts.</td>
+						</tr>
+						<tr>
+							<td class=""><span class="uk-label uk-label-danger">extra</span></td>
+							<td>singular.php</td>
+							<td class="uk-text-right">The singular template is used for posts when single.php is not found, or for pages when page.php are not found. If singular.php is not found, index.php is used.</td>
+						</tr>
+						<tr>
+							<td class=""><span class="uk-label uk-label-danger">extra</span></td>
+							<td>single-{post-type}.php</td>
+							<td class="uk-text-right">The single post template used when a visitor requests a single post from a custom post type. For example, single-book.php would be used for displaying single posts from a custom post type named book. The index.php is used if a specific query template for the custom post type is not present.</td>
+						</tr>
+						<tr>
+							<td class=""><span class="uk-label uk-label-danger">extra</span></td>
+							<td>archive-{post-type}.php</td>
+							<td class="uk-text-right">The archive post type template is used when visitors request a custom post type archive. For example, archive-books.php would be used for displaying an archive of posts from the custom post type named books. The archive.php template file is used if the archive-{post-type}.php is not present.</td>
+						</tr>
+						<tr>
+							<td class=""><span class="uk-label uk-label-danger">extra</span></td>
+							<td>page-{slug}.php</td>
+							<td class="uk-text-right">The page slug template is used when visitors request a specific page, for example one with the “about” slug (page-about.php).</td>
+						</tr>
+						<tr>
+							<td class=""><span class="uk-label uk-label-danger">extra</span></td>
+							<td>taxonomy.php</td>
+							<td class="uk-text-right">The taxonomy term template is used when a visitor requests a term in a custom taxonomy.</td>
+						</tr>
+						<tr>
+							<td class=""><span class="uk-label uk-label-danger">extra</span></td>
+							<td>author.php</td>
+							<td class="uk-text-right">The author page template is used whenever a visitor loads an author page.</td>
+						</tr>
+						<tr>
+							<td class=""><span class="uk-label uk-label-danger">extra</span></td>
+							<td>date.php</td>
+							<td class="uk-text-right">The date/time template is used when posts are requested by date or time.</td>
+						</tr>
+						<tr>
+							<td class=""><span class="uk-label uk-label-danger">extra</span></td>
+							<td>attachment.php</td>
+							<td class="uk-text-right">The attachment template is used when viewing a single attachment like an image, pdf, or other media file.</td>
+						</tr>
+						<tr>
+							<td class=""><span class="uk-label uk-label-danger">extra</span></td>
+							<td>image.php</td>
+							<td class="uk-text-right">The image attachment template is a more specific version of attachment.php and is used when viewing a single image attachment. If not present, WordPress will use attachment.php instead.</td>
+						</tr>
+						<tr>
+							<td class=""><span class="uk-label uk-label-danger">extra</span></td>
+							<td>rtl.css</td>
+							<td class="uk-text-right">The right-to-left stylesheet is included automatically if the website language’s text direction is right-to-left.</td>
+						</tr>
+					</tbody>
+				</table>
+				<p class="uk-text-meta uk-text-right">
+					<a target="_blank" href="https://developer.wordpress.org/themes/basics/template-hierarchy/">https://developer.wordpress.org/themes/basics/template-hierarchy/</a>
+				</p>
+			</div>
+		</div>
+
+		<div class="uk-card uk-card-default uk-card-small uk-card-body uk-margin-medium">
+			<h3>style.css</h3>
+<pre>
+<code>/*
+Theme Name: Your theme name
+Theme URI: https://your-repository.com/
+Author: Name Surname
+Author URI: mailto:youremail@yourdomain.com
+Description: You can write a description of the theme here
+Version: 1.0.0
+License: Your license type here (GPL, MIT ...)
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: yourtextdomain
+*/</code>
+</pre>
+			<p class="uk-text-meta uk-text-right">
+				<a target="_blank" href="https://developer.wordpress.org/themes/basics/main-stylesheet-style-css/">https://developer.wordpress.org/themes/basics/main-stylesheet-style-css/</a>
+			</p>
+		</div>
+
+		<div class="uk-card uk-card-default uk-card-small uk-card-body uk-margin-medium">
+			<h3>the loop</h3>
+<pre>
+<code>&lt;?php 
+if ( have_posts() ) { 
+    while ( have_posts() ) {
+    	the_post(); 
+        // Display post content
+    }
+} 
+?&gt;</code>
+</pre>
+			<p class="uk-text-meta uk-text-right">
+				<a target="_blank" href="https://developer.wordpress.org/themes/basics/the-loop/">https://developer.wordpress.org/themes/basics/the-loop/</a>
+			</p>
+		</div>
+
+		<div class="uk-card uk-card-default uk-card-small uk-card-body uk-margin-medium">
+			<h3>using the loop</h3>
+			<p>The Loop can display a number of different elements for each post. For example, some common template tags used in many themes are:</p>
+<pre>
+<code>next_post_link() – a link to the post published chronologically after the current post
+previous_post_link() – a link to the post published chronologically before the current post
+the_category() – the category or categories associated with the post or page being viewed
+the_author() – the author of the post or page
+the_content() – the main content for a post or page
+the_excerpt() – the first 55 words of a post’s main content followed by an ellipsis (…) or read more link that goes to the full post
+the_ID() – the ID for the post or page
+the_meta() – the custom fields associated with the post or page
+the_shortlink() – a link to the page or post using the url of the site and the ID of the post or page
+the_tags() – the tag or tags associated with the post
+the_title() – the title of the post or page
+the_time() – the time or date for the post or page. This can be customized using standard php date function formatting.</code>
+</pre>
+			<p class="uk-text-meta uk-text-right">
+				<a target="_blank" href="https://developer.wordpress.org/themes/basics/template-tags/">https://developer.wordpress.org/themes/basics/template-tags/</a>
+			</p>
+			<p>You can also use conditional tags, such as:</p>
+<pre>
+<code>is_home() – Returns true if the current page is the homepage
+is_admin() – Returns true if inside Administration Screen, false otherwise
+is_single() – Returns true if the page is currently displaying a single post
+is_page() – Returns true if the page is currently displaying a single page
+is_page_template() – Can be used to determine if a page is using a specific template, for example: is_page_template('about-page.php')
+is_category() – Returns true if page or post has the specified category, for example: is_category('news')
+is_tag() – Returns true if a page or post has the specified tag
+is_author() – Returns true if inside author’s archive page
+is_search() – Returns true if the current page is a search results page
+is_404() – Returns true if the current page does not exist
+has_excerpt() – Returns true if the post or page has an excerpt</code>
+</pre>
+			<p class="uk-text-meta uk-text-right">
+				<a target="_blank" href="https://developer.wordpress.org/themes/basics/conditional-tags/">https://developer.wordpress.org/themes/basics/conditional-tags/</a>
+			</p>
+		</div>
+
+	</div>
+	
+</body>
+</html>

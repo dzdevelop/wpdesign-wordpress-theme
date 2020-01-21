@@ -1,23 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Home</title>
-	<link rel="stylesheet" href="stile.css">
-</head>
-<body class="home">
-	<header>
-		<div class="logo">
-			<h1>WordPress Design</h1>
-		</div>
-		<nav>
-			<ul>
-				<li><a href="#" class="active">Home</a></li>
-				<li><a href="blog.html">Blog</a></li>
-			</ul>
-		</nav>
-	</header>
+<?php
+/**
+ * The main template file. It is required in all themes.
+ *
+ * @since 1.0.0
+ * @version 1.0.0
+ *
+ * @see  https://developer.wordpress.org/reference/functions/get_header/
+ * @see  https://developer.wordpress.org/reference/functions/get_footer/
+ */
+?>
+<?php
+	/**
+	 * get_header() is the function that goes to call the header.php template
+	 * 
+	 * @see  https://developer.wordpress.org/reference/functions/get_header/
+	 */
+	get_header();
+?>
 
 	<div class="banner"></div>
 
@@ -72,9 +71,11 @@
 		</ul>
 	</aside>
 
-	<footer>
-		<h3>WordPress Design</h3>
-		<p>copyright &copy; Mohole S.R.L. 2019</p>
-	</footer>
-</body>
-</html>
+<?php
+	/**
+	 * get_footer() is the function that goes to call the footer.php template
+	 * 
+	 * @see  https://developer.wordpress.org/reference/functions/get_footer/
+	 */
+	get_footer();
+?>
