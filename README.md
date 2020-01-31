@@ -13,3 +13,11 @@ Lezione 2)
 - utilizzo delle funzioni wp_head e wp_footer
 - divisione index in header.php, index.php e footer.php richiamati tramite get_header e get_footer
 - struttura tema modificata per simulare un progetto reale (cartella inc/css/)
+
+Lezione 3)
+- struttura templates di WP, gerarchia e controllo files
+- il LOOP
+- dinamicità dei dati in pagina con the_title(), the_content() ecc..
+- body class automatica
+- il template 404
+- il template page
