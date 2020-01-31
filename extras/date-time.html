@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Date and Time in WP</title>
+
+	<!-- UIkit CSS -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.2.4/dist/css/uikit.min.css" />
+
+	<!-- UIkit JS -->
+	<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.4/dist/js/uikit.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.4/dist/js/uikit-icons.min.js"></script>
+</head>
+<body class="uk-background-muted uk-padding uk-padding-remove-horizontal">
+
+	<!-- This document was created in 2019 by Daniele Zerilli for MOHOLE S.R.L. -->
+
+	<div class="uk-container">
+
+		<h1 class="uk-heading-bullet">Date and Time in WP</h1>
+
+		<div class="uk-card uk-card-default uk-card-small uk-card-body uk-margin-medium">
+			<p>In WordPress you can use the functions <b>the_date()</b> and <b>get_the_date()</b> to print or retrieve the date on which the post was written.<br>Both functions can be used passing a string parameter <b>$d</b> to specify the PHP date format you like.</p>
+			<p class="uk-text-meta uk-text-right">
+				<a target="_blank" href="https://developer.wordpress.org/reference/functions/get_the_date/">https://developer.wordpress.org/reference/functions/get_the_date/</a>
+			</p>
+		</div>
+
+		<div class="uk-card uk-card-default uk-card-small uk-card-body uk-margin-medium">
+			<div class="uk-overflow-auto uk-margin">
+				<table class="uk-table uk-table-small uk-table-striped uk-table-middle">
+					<thead>
+						<tr>
+							<th colspan="3" class="uk-text-center">Day of the month</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="uk-width-small">d</td>
+							<td>Numeric with leading 0</td>
+							<td class="uk-width-medium">01-31</td>
+						</tr>
+						<tr>
+							<td class="uk-width-small">j</td>
+							<td>Numeric without leading 0</td>
+							<td class="uk-width-medium">1-31</td>
+						</tr>
+						<tr>
+							<td class="uk-width-small">s</td>
+							<td>English suffixes</td>
+							<td class="uk-width-medium">st, nd or th in the 1st, 2nd o 15th</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+
+		<div class="uk-card uk-card-default uk-card-small uk-card-body uk-margin-medium">
+			<div class="uk-overflow-auto uk-margin">
+				<table class="uk-table uk-table-small uk-table-striped uk-table-middle">
+					<thead>
+						<tr>
+							<th colspan="3" class="uk-text-center">Day of the week</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="uk-width-small">l</td>
+							<td>Complete name</td>
+							<td class="uk-width-medium">Sunday - Saturday</td>
+						</tr>
+						<tr>
+							<td class="uk-width-small">D</td>
+							<td>Short name</td>
+							<td class="uk-width-medium">Sun - Sat</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+
+		<div class="uk-card uk-card-default uk-card-small uk-card-body uk-margin-medium">
+			<div class="uk-overflow-auto uk-margin">
+				<table class="uk-table uk-table-small uk-table-striped uk-table-middle">
+					<thead>
+						<tr>
+							<th colspan="3" class="uk-text-center">Month</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="uk-width-small">m</td>
+							<td>Numeric with leading 0</td>
+							<td class="uk-width-medium">01-12</td>
+						</tr>
+						<tr>
+							<td class="uk-width-small">n</td>
+							<td>Numeric without leading 0</td>
+							<td class="uk-width-medium">1-12</td>
+						</tr>
+						<tr>
+							<td class="uk-width-small">F</td>
+							<td>Complete name</td>
+							<td class="uk-width-medium">January - December</td>
+						</tr>
+						<tr>
+							<td class="uk-width-small">M</td>
+							<td>Short name</td>
+							<td class="uk-width-medium">Jan - Dec</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+
+		<div class="uk-card uk-card-default uk-card-small uk-card-body uk-margin-medium">
+			<div class="uk-overflow-auto uk-margin">
+				<table class="uk-table uk-table-small uk-table-striped uk-table-middle">
+					<thead>
+						<tr>
+							<th colspan="3" class="uk-text-center">Year</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="uk-width-small">Y</td>
+							<td>Numeric 4 digits</td>
+							<td class="uk-width-medium">1999,2003</td>
+						</tr>
+						<tr>
+							<td class="uk-width-small">y</td>
+							<td>Numeric 2 digits</td>
+							<td class="uk-width-medium">99,03</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+
+		<div class="uk-card uk-card-default uk-card-small uk-card-body uk-margin-medium">
+			<div class="uk-overflow-auto uk-margin">
+				<table class="uk-table uk-table-small uk-table-striped uk-table-middle">
+					<thead>
+						<tr>
+							<th colspan="3" class="uk-text-center">Hours</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="uk-width-small">a</td>
+							<td>Lowercase</td>
+							<td class="uk-width-medium">am,pm</td>
+						</tr>
+						<tr>
+							<td class="uk-width-small">A</td>
+							<td>Uppercase</td>
+							<td class="uk-width-medium">AM,PM</td>
+						</tr>
+						<tr>
+							<td class="uk-width-small">g</td>
+							<td>12 hours without leading 0</td>
+							<td class="uk-width-medium">1-12</td>
+						</tr>
+						<tr>
+							<td class="uk-width-small">h</td>
+							<td>12 hours with leading 0</td>
+							<td class="uk-width-medium">01-12</td>
+						</tr>
+						<tr>
+							<td class="uk-width-small">G</td>
+							<td>24 hours without leading 0</td>
+							<td class="uk-width-medium">0-23</td>
+						</tr>
+						<tr>
+							<td class="uk-width-small">H</td>
+							<td>24 hours with leading 0</td>
+							<td class="uk-width-medium">00-23</td>
+						</tr>
+						<tr>
+							<td class="uk-width-small">i</td>
+							<td>Minutes with leading 0</td>
+							<td class="uk-width-medium">00-59</td>
+						</tr>
+						<tr>
+							<td class="uk-width-small">s</td>
+							<td>Seconds with leading 0</td>
+							<td class="uk-width-medium">00-59</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+
+		<div class="uk-card uk-card-default uk-card-small uk-card-body uk-margin-medium">
+			<h3>Examples</h3>
+			<p>
+				<b>echo get_the_date( "d/m" )</b> prints <b>08/12</b><br>
+				<b>echo get_the_date( "j/m/y - H:i" )</b> prints <b>8/12/19 - 22:48</b><br>
+				<b>echo get_the_date( "D d F Y" )</b> prints <b>Tue 16 December 2019</b><br>
+			</p>
+		</div>
+
+	</div>
+	
+</body>
+</html>

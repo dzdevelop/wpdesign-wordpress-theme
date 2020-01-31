@@ -30,7 +30,7 @@
 	<!-- END WP HEAD SCRIPTS -->
 
 </head>
-<body class="home">
+<body <?php body_class(); ?>>
 	<header>
 		<div class="logo">
 			<h1>WordPress Design</h1>
