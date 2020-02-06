@@ -21,3 +21,9 @@ Lezione 3)
 - body class automatica
 - il template 404
 - il template page
+
+Lezione 4)
+- il template single
+- il template tag
+- prime esperienze con la documentazione di developer.wordpress.org
+- sfruttare alcune funzioni di WP per ottenere risultati "non standard"

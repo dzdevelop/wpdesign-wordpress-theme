@@ -58,7 +58,6 @@ body>.banner {
 	height: 250px;
 	margin-bottom: 2rem;
 	overflow: hidden;
-	background-image: url(https://via.placeholder.com/1600x400.png?text=WordPress+Design);
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
@@ -219,7 +218,8 @@ body>footer p:last-child {
 		width: 45%;
 	}
 
-	body.single>main>.flex>article {
+	body.single>main>.flex>article,
+	body.page>main>.flex>article {
 		width: 100%;
 	}
 

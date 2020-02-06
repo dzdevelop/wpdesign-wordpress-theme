@@ -6,6 +6,7 @@
  * @version 1.0.0
  *
  * @see  https://developer.wordpress.org/reference/functions/wp_head/
+ * @see  https://developer.wordpress.org/reference/functions/body_class/
  */
 ?>
 <!DOCTYPE html>
